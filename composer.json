@@ -1,0 +1,62 @@
+{
+    "name": "cloudnativephp/kubernetes",
+    "description": "A Kubernetes client library for PHP.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "kubernetes"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kubernetes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kubernetes\\Tests\\": "tests/",
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Steven Crothers",
+            "email": "steven@scrothers.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "symfony/property-access": "^7.0",
+        "symfony/property-info": "^7.0",
+        "symfony/serializer": "^7.0",
+        "symfony/yaml": "^7.3"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "symfony/var-dumper": "^7.0"
+    },
+    "scripts": {
+        "test": "pest",
+        "test-coverage": "pest --coverage",
+        "analyse": "phpstan analyse",
+        "format": "php-cs-fixer fix",
+        "format-check": "php-cs-fixer fix --dry-run --diff"
+    },
+    "support": {
+        "issues": "https://github.com/cloudnativephp/kubernetes/issues",
+        "source": "https://github.com/cloudnativephp/kubernetes",
+        "wiki": "https://github.com/cloudnativephp/kubernetes/wiki"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

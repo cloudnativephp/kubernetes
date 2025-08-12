@@ -1,0 +1,39 @@
+version: 2
+updates:
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - dependencies
+    open-pull-requests-limit: 10
+
+  # Composer packages for PHP library
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - dependencies
+    versioning-strategy: widen
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "all"
+    ignore:
+      # Allow major updates to be surfaced but you can list blockers here if needed
+      - dependency-name: "php"
+        versions: [">=9"]
+    groups:
+      symfony:
+        applies-to: version-updates
+        patterns:
+          - "symfony/*"
+      pest:
+        applies-to: version-updates
+        patterns:
+          - "pestphp/*"
+      guzzle:
+        applies-to: version-updates
+        patterns:
+          - "guzzlehttp/*"

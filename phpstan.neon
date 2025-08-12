@@ -1,0 +1,50 @@
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests
+    ignoreErrors:
+        - identifier: missingType.iterableValue
+        - message: '#Call to an undefined method .+::setNamespace\(\)#'
+        - message: '#Call to an undefined method .+::bindToClusterRole\(\)#'
+        - message: '#Call to an undefined method .+::addNodeManagementRule\(\)#'
+        - message: '#Call to an undefined method .+::setController\(\)#'
+        - message: '#Call to an undefined method .+::setGroup\(\)#'
+        - message: '#Call to an undefined method .+::setToken\(\)#'
+        - message: '#Call to an undefined method .+::setResourceAttributes\(\)#'
+        - message: '#Call to an undefined method .+::setUser\(\)#'
+        - message: '#Call to an undefined method .+::setRequest\(\)#'
+        - message: '#Call to an undefined method .+::setTimestamp\(\)#'
+        - message: '#Call to an undefined method .+::setValue\(\)#'
+        - message: '#Call to an undefined method .+::setDriver\(\)#'
+        - message: '#Call to an undefined method .+::setAttachRequired\(\)#'
+        - message: '#Call to an undefined method .+::setProvisioner\(\)#'
+        - message: '#Call to an undefined method .+::setAttacher\(\)#'
+        - message: '#Call to an undefined method .+::setHandler\(\)#'
+        - message: '#Call to an undefined method .+::addItem\(\)#'
+        - message: '#Unable to resolve the template type TValue in call to function expect#'
+        - message: '#Unsafe usage of new static\(\)#'
+          path: src/API/AbstractResource.php
+        - message: '#Unsafe usage of new static\(\)#'
+          path: src/API/Core/V1/KubernetesList.php
+        - message: '#Unsafe usage of new static\(\)#'
+          path: src/Client/Auth/InClusterAuthentication.php
+        - message: '#Unsafe usage of new static\(\)#'
+          path: src/Client/Client.php
+        - message: '#Access to an undefined property PHPUnit\\Framework\\TestCase::\$pod#'
+          path: tests/Unit/ResourceSerializationTest.php
+        - message: '#Access to an undefined property PHPUnit\\Framework\\TestCase::\$expectedData#'
+          path: tests/Unit/ResourceSerializationTest.php
+        - message: '#Parameter \#1 \$json of static method .+::fromJson\(\) expects string, string\|false given#'
+          path: tests/Unit/ResourceSerializationTest.php
+        - message: '#Parameter \#1 \$json of function json_decode expects string, string\|false given#'
+        - message: '#Parameter \#2 \$haystack of method PHPUnit\\Framework\\Assert::assertStringContainsString\(\) expects string, string\|false given#'
+        - message: '#Offset .+ does not exist on array<string, mixed>\|null#'
+        - message: '#Property .+ is never read, only written#'
+        - message: '#Dead catch - Exception is never thrown in the try block#'
+        - message: '#Result of .+ is always false#'
+          path: src/Client/Http/CurlHttpClient.php
+        - message: '#Strict comparison using === between int and false will always evaluate to false#'
+          path: src/Client/Http/CurlHttpClient.php
+        - message: '#Parameter \#1 \$string of function substr expects string, string\|true given#'
+          path: src/Client/Http/CurlHttpClient.php

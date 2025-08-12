@@ -1,0 +1,24 @@
+# Automatically mark and close stale issues and PRs
+# Docs: https://github.com/actions/stale
+
+# Consider items stale after 60 days of inactivity; close 14 days later
+daysUntilStale: 60
+daysUntilClose: 14
+exemptLabels:
+  - security
+  - pinned
+  - "help wanted"
+  - "good first issue"
+  - "do not close"
+  - dependencies
+staleLabel: stale
+markComment: |
+  This issue/pr has been automatically marked as stale because it has not had
+  recent activity. It will be closed if no further activity occurs.
+  If this is still relevant, please add a comment or remove the `stale` label.
+closeComment: |
+  Closing due to inactivity. If this is still relevant, please reopen or create a new issue.
+onlyLabels: []
+operationsPerRun: 100
+removeStaleWhenUpdated: true
+ascending: false
