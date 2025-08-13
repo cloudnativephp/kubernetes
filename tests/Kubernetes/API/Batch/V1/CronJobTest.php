@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Batch\V1;
+
 use Kubernetes\API\Batch\V1\CronJob;
 
 it('can create a cron job', function (): void {

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\Client\Auth;
+
 use Kubernetes\Client\Auth\AuthenticationFactory;
 use Kubernetes\Client\Auth\KubeconfigAuthentication;
 use Kubernetes\Client\Auth\TokenAuthentication;

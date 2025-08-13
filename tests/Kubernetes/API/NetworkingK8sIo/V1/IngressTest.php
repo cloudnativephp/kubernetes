@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\NetworkingK8sIo\V1;
+
 use Kubernetes\API\NetworkingK8sIo\V1\Ingress;
 
 it('can create an ingress', function (): void {

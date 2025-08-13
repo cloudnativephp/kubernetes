@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kubernetes\Tests\API\MetricsK8sIo\V1Beta1;
+namespace Tests\Kubernetes\API\MetricsK8sIo\V1Beta1;
 
 use Kubernetes\API\MetricsK8sIo\V1Beta1\NodeMetrics;
 

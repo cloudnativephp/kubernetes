@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\RbacAuthorizationK8sIo\V1;
+
 use Kubernetes\API\RbacAuthorizationK8sIo\V1\ClusterRoleBinding;
 
 it('can create a cluster role binding', function (): void {

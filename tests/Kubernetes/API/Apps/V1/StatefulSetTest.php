@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Apps\V1;
+
 use Kubernetes\API\Apps\V1\StatefulSet;
 
 it('can create a stateful set', function (): void {

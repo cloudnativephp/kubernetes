@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\AuthorizationK8sIo\V1;
+
 use Kubernetes\API\AuthorizationK8sIo\V1\LocalSubjectAccessReview;
 
 it('can create a LocalSubjectAccessReview', function (): void {

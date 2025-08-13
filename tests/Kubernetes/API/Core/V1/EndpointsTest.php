@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Core\V1;
+
 use Kubernetes\API\Core\V1\Endpoints;
 
 it('can create an endpoints resource', function (): void {

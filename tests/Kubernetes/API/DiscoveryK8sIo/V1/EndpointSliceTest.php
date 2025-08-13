@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\DiscoveryK8sIo\V1;
+
 use Kubernetes\API\DiscoveryK8sIo\V1\EndpointSlice;
 
 it('can create an EndpointSlice', function (): void {

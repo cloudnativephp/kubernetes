@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\Client\Http;
+
 use Kubernetes\Client\Http\GuzzleHttpClient;
 use Kubernetes\Client\Http\HttpClientInterface;
 

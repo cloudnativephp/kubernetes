@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Apps\V1;
+
 use Kubernetes\API\Apps\V1\DaemonSet;
 
 it('can create a daemon set', function (): void {

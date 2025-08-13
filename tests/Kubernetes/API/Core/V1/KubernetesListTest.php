@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Core\V1;
+
 use Kubernetes\API\Core\V1\KubernetesList;
 use Kubernetes\API\Core\V1\Pod;
 use Kubernetes\API\Core\V1\Service;

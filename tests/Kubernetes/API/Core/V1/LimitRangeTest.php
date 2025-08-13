@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Core\V1;
+
 use Kubernetes\API\Core\V1\LimitRange;
 
 it('can create a limit range resource', function (): void {

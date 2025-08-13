@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kubernetes\Tests\API\StorageK8sIo\V1;
+namespace Tests\Kubernetes\API\StorageK8sIo\V1;
 
 use Kubernetes\API\StorageK8sIo\V1\StorageClass;
 

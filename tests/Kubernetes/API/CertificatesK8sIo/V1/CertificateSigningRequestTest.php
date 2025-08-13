@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\CertificatesK8sIo\V1;
+
 use Kubernetes\API\CertificatesK8sIo\V1\CertificateSigningRequest;
 
 it('can create a CertificateSigningRequest', function (): void {

@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\NetworkingK8sIo\V1;
+
 use Kubernetes\API\NetworkingK8sIo\V1\IngressClass;
 
 it('can create an ingress class', function (): void {

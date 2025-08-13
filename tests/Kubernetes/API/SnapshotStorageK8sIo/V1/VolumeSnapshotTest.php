@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kubernetes\Tests\API\SnapshotStorageK8sIo\V1;
+namespace Tests\Kubernetes\API\SnapshotStorageK8sIo\V1;
 
 use Kubernetes\API\SnapshotStorageK8sIo\V1\VolumeSnapshot;
 use ReflectionClass;

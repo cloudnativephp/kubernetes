@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Apps\V1;
+
 use Kubernetes\API\Apps\V1\ReplicaSet;
 
 it('can create a replica set', function (): void {

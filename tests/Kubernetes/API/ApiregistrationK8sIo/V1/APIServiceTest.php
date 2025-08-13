@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\ApiregistrationK8sIo\V1;
+
 use Kubernetes\API\ApiregistrationK8sIo\V1\APIService;
 
 it('can create an APIService', function (): void {

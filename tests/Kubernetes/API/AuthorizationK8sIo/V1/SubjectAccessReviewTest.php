@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\AuthorizationK8sIo\V1;
+
 use Kubernetes\API\AuthorizationK8sIo\V1\SubjectAccessReview;
 
 it('can create a SubjectAccessReview', function (): void {

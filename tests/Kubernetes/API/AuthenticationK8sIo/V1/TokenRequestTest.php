@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\AuthenticationK8sIo\V1;
+
 use Kubernetes\API\AuthenticationK8sIo\V1\TokenRequest;
 
 it('can create a TokenRequest', function (): void {

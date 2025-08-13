@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kubernetes\Tests\API\SchedulingK8sIo\V1;
+namespace Tests\Kubernetes\API\SchedulingK8sIo\V1;
 
 use Kubernetes\API\SchedulingK8sIo\V1\PriorityClass;
 

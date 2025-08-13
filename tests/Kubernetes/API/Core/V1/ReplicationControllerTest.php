@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Core\V1;
+
 use Kubernetes\API\Core\V1\ReplicationController;
 
 it('can create a replication controller resource', function (): void {

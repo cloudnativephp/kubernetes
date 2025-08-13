@@ -2,12 +2,15 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API;
+
 use Kubernetes\API\AbstractResource;
 use Kubernetes\Contracts\ClientInterface;
 use Kubernetes\Exceptions\ResourceNotFoundException;
 use Kubernetes\Tests\TestCase;
 use Kubernetes\Traits\IsNamespacedResource;
 use PHPUnit\Framework\MockObject\MockObject;
+use ReflectionClass;
 
 /**
  * Test implementation of AbstractResource for testing purposes.

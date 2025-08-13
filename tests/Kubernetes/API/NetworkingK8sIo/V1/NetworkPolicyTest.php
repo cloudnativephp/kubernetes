@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\NetworkingK8sIo\V1;
+
 use Kubernetes\API\NetworkingK8sIo\V1\NetworkPolicy;
 
 it('can create a network policy', function (): void {

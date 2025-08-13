@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\CoordinationK8sIo\V1;
+
 use Kubernetes\API\CoordinationK8sIo\V1\Lease;
 
 it('can create a Lease', function (): void {

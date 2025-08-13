@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\EventsK8sIo\V1;
+
 use Kubernetes\API\EventsK8sIo\V1\Event;
 
 it('can create an Event', function (): void {

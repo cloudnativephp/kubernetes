@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Tests\Kubernetes\API\Autoscaling\V1;
+
 use Kubernetes\API\Autoscaling\V1\HorizontalPodAutoscaler;
 
 it('can create a horizontal pod autoscaler', function (): void {

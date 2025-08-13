@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kubernetes\Tests\API\NodeK8sIo\V1;
+namespace Tests\Kubernetes\API\NodeK8sIo\V1;
 
 use Kubernetes\API\NodeK8sIo\V1\RuntimeClass;
 
