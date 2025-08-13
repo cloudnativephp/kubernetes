@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
+use InvalidArgumentException;
+use JsonException;
 use Kubernetes\API\Core\V1\Pod;
 
 /*

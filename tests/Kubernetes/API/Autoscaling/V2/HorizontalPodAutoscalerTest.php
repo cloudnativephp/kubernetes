@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Kubernetes\API\Autoscaling\V2;
 
+use InvalidArgumentException;
 use Kubernetes\API\Autoscaling\V2\HorizontalPodAutoscaler;
+use ReflectionClass;
 
 it('can create a horizontal pod autoscaler v2', function (): void {
     $hpa = new HorizontalPodAutoscaler();

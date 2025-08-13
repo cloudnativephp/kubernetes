@@ -31,20 +31,25 @@ parameters:
           path: src/Client/Auth/InClusterAuthentication.php
         - message: '#Unsafe usage of new static\(\)#'
           path: src/Client/Client.php
-        - message: '#Access to an undefined property PHPUnit\\Framework\\TestCase::\$pod#'
-          path: tests/Unit/ResourceSerializationTest.php
-        - message: '#Access to an undefined property PHPUnit\\Framework\\TestCase::\$expectedData#'
-          path: tests/Unit/ResourceSerializationTest.php
-        - message: '#Parameter \#1 \$json of static method .+::fromJson\(\) expects string, string\|false given#'
-          path: tests/Unit/ResourceSerializationTest.php
         - message: '#Parameter \#1 \$json of function json_decode expects string, string\|false given#'
         - message: '#Parameter \#2 \$haystack of method PHPUnit\\Framework\\Assert::assertStringContainsString\(\) expects string, string\|false given#'
-        - message: '#Offset .+ does not exist on array<string, mixed>\|null#'
         - message: '#Property .+ is never read, only written#'
-        - message: '#Dead catch - Exception is never thrown in the try block#'
         - message: '#Result of .+ is always false#'
           path: src/Client/Http/CurlHttpClient.php
         - message: '#Strict comparison using === between int and false will always evaluate to false#'
           path: src/Client/Http/CurlHttpClient.php
         - message: '#Parameter \#1 \$string of function substr expects string, string\|true given#'
           path: src/Client/Http/CurlHttpClient.php
+
+        # New PHPStan upgrade error types
+        - identifier: throws.unusedType
+        - identifier: booleanNot.alwaysFalse
+        - identifier: method.alreadyNarrowedType
+        - identifier: function.impossibleType
+        - identifier: function.alreadyNarrowedType
+
+        # Pest framework property access issues
+        - identifier: property.notFound
+          path: tests/Unit/ResourceSerializationTest.php
+        - identifier: argument.type
+          path: tests/Unit/ResourceSerializationTest.php

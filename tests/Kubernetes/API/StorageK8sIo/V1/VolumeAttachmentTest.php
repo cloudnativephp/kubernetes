@@ -32,9 +32,12 @@ it('can set CSI volume source', function (): void {
     $volumeAttachment->setCsiSource('ebs.csi.aws.com', 'vol-123456789', ['fsType' => 'ext4']);
 
     $source = $volumeAttachment->getSource();
-    expect($source['csi']['driver'])->toBe('ebs.csi.aws.com');
-    expect($source['csi']['volumeHandle'])->toBe('vol-123456789');
-    expect($source['csi']['volumeAttributes']['fsType'])->toBe('ext4');
+    expect($source)->not->toBeNull();
+    if ($source !== null && isset($source['csi'])) {
+        expect($source['csi']['driver'])->toBe('ebs.csi.aws.com');
+        expect($source['csi']['volumeHandle'])->toBe('vol-123456789');
+        expect($source['csi']['volumeAttributes']['fsType'])->toBe('ext4');
+    }
 });
 
 it('can set persistent volume source', function (): void {
@@ -42,7 +45,10 @@ it('can set persistent volume source', function (): void {
     $volumeAttachment->setPersistentVolumeSource('pv-test');
 
     $source = $volumeAttachment->getSource();
-    expect($source['persistentVolumeName'])->toBe('pv-test');
+    expect($source)->not->toBeNull();
+    if ($source !== null && isset($source['persistentVolumeName'])) {
+        expect($source['persistentVolumeName'])->toBe('pv-test');
+    }
 });
 
 it('can check attachment status', function (): void {

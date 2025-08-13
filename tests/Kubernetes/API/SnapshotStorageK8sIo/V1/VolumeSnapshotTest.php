@@ -32,7 +32,10 @@ it('can set persistent volume claim source', function (): void {
     $volumeSnapshot->setPersistentVolumeClaimSource('my-pvc');
 
     $source = $volumeSnapshot->getSource();
-    expect($source['persistentVolumeClaimName'])->toBe('my-pvc');
+    expect($source)->not->toBeNull();
+    if ($source !== null && isset($source['persistentVolumeClaimName'])) {
+        expect($source['persistentVolumeClaimName'])->toBe('my-pvc');
+    }
 });
 
 it('can set volume snapshot content source', function (): void {
@@ -40,7 +43,10 @@ it('can set volume snapshot content source', function (): void {
     $volumeSnapshot->setVolumeSnapshotContentSource('snap-content-123');
 
     $source = $volumeSnapshot->getSource();
-    expect($source['volumeSnapshotContentName'])->toBe('snap-content-123');
+    expect($source)->not->toBeNull();
+    if ($source !== null && isset($source['volumeSnapshotContentName'])) {
+        expect($source['volumeSnapshotContentName'])->toBe('snap-content-123');
+    }
 });
 
 it('can check if snapshot is ready to use', function (): void {

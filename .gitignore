@@ -326,3 +326,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/phpunit,phpstorm,phpstorm+iml,phpstorm+all,macos,linux,windows,phpcodesniffer
+
+.php-cs-fixer.cache

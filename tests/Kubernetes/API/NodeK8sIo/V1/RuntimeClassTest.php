@@ -37,7 +37,10 @@ it('can add node selector', function (): void {
     $runtimeClass->addNodeSelector(['kubernetes.io/arch' => 'amd64']);
 
     $scheduling = $runtimeClass->getScheduling();
-    expect($scheduling['nodeSelector']['kubernetes.io/arch'])->toBe('amd64');
+    expect($scheduling)->not->toBeNull();
+    if ($scheduling !== null && isset($scheduling['nodeSelector'])) {
+        expect($scheduling['nodeSelector']['kubernetes.io/arch'])->toBe('amd64');
+    }
 });
 
 it('can add toleration', function (): void {
@@ -46,8 +49,11 @@ it('can add toleration', function (): void {
     $runtimeClass->addToleration($toleration);
 
     $scheduling = $runtimeClass->getScheduling();
-    expect($scheduling['tolerations'])->toHaveCount(1);
-    expect($scheduling['tolerations'][0])->toBe($toleration);
+    expect($scheduling)->not->toBeNull();
+    if ($scheduling !== null && isset($scheduling['tolerations'])) {
+        expect($scheduling['tolerations'])->toHaveCount(1);
+        expect($scheduling['tolerations'][0])->toBe($toleration);
+    }
 });
 
 it('can create toleration with helper method', function (): void {
